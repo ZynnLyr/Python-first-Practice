@@ -83,36 +83,6 @@
 ```python
 ```
 
-## Python环境 （Python environment）
-
-* 安装Python科学堆栈的推荐方法是使用Continuum Analytics Anaconda。
-* Anaconda是一个免费的软件包管理器，环境管理器，以及开源软件包的集合。
-* Anaconda包括核心Python解释器和标准库。
-* https://www.continuum.io/downloads
-
-
-```python
-```
-
-## Anaconda中包括的库（Libararies）
-* NumPy（http://numpy.scipy.org ）：该库用于处理（大）数组。
-* SciPy（http://www.scipy.org ）：该库包含许多有用的科学功能。
-* Matplotlib（http://matplotlib.sourceforge.net ）：该库用于绘图。
-* Pandas（http://pandas.sourceforge.net ）：该库有效并快速分析大数据集; 尤其针对金融时间序列。
-* IPython（http://wprw.ipython.org ）：shell、或基于浏览器：开发环境。
-* Spyder（http://pythonhosted.org/spyder/ ）：IDE交互式开发环境
-```python
-```
-
-## 管理你的Anaconda
-* 在你的终端或cmd，输入
- conda list
-* 您可以看到已安装的软件包列表
-* 更多的管理方法可以在这里找到：  http://conda.pydata.org/docs/using/pkgs.html
-
-```python
-```
-
 ## 你可以在本课程中学到什么？                                       
 * 本课程是为初学者设计的。 它不需要任何以前的任何编程语言的知识。
 * Python编程的基础知识。
@@ -128,18 +98,6 @@
 * 下午：半小时内完成介绍部分。 那么我们会有三个大问题要解决。 他们将是今天的一个很好的总结：讲座。 你将有一个小时独立工作。 然后，我将在过去半小时内提供分析和解决方案。
 
 
-
-
-```python
-```
-
-## 练习1
-* 安装Anaconda并更新它以便拥有   所有包的最新版本。 我们将使用Python 3.4（而不是以前的Python 2.7版本）。
-* 通过键入以下命令启动Spyder并计算76：     
-  
-  x = 7 ** 6   打印（x）
-
-* 启动IPython Notebook并计算7的6次方
 
 
 ```python
