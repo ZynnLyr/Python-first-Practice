@@ -130,8 +130,11 @@ Python 2 or 3?
 ## 练习1
 * 打开PyCharm
 * 新建一个文件并键入以下代码并保存    
-  
-  print('Hello World!')
+
+```python
+  print('Hello World!')
+```
+  
 
 * 运行该文件：在左侧栏找到文件，右键文件弹出菜单后点击Run xxx.py
 * 查看下方的控制台界面,是否输出 Hello World！
@@ -145,8 +148,11 @@ Python 2 or 3?
 * 在C++等语言中使用‘；’结束一个语句；而Python使用回车和缩进来识别语句
 * 在某些语句之后，会加一个缩进; 缩进减少，则表示当前块结束。
 * 例如
-    if a is true:
-      print（x） 
+```python
+if a is true:
+  print（x） 
+```
+    
 
 
 ```python
@@ -208,26 +214,28 @@ Python 2 or 3?
 ## 练习2（Exercise 2）
 * 猜下面代码的结果。执行他们，看答案。
 * Try to guess the results of the following code. Implement them and check your answers. 
-- a = 10   # int 
-- b = 3.14 # fLoat 
-- c = 3    #int 
-- d = a ** 2 # square of a 
-- print (type (d))    # return the type of d  
-- print (type (d/l0)) # return the type of d/l0 
-- print (type (a/b))  # return the type of a/b 
-- print (type (a/c))  # return the type of a/c 
-- print (type (b*d))  # return the type of b*d
+```python
+a = 10   # int 
+b = 3.14 # fLoat 
+c = 3    #int 
+d = a ** 2 # square of a 
+print (type (d))    # return the type of d  
+print (type (d/l0)) # return the type of d/l0 
+print (type (a/b))  # return the type of a/b 
+print (type (a/c))  # return the type of a/c 
+print (type (b*d))  # return the type of b*d
+
+```
+
 
 ```python
 ```
 
 ## (optional reading material)浮点数的精度（Precision of float）
-* 尝试在您的控制台中键入0.1 + 0.2。 你会发现这个值是  
-- 0.30000000000000004
-
+* 尝试在您的控制台中键入0.1 + 0.2。 你会发现这个值是 0.30000000000000004
 * 这是二进制浮点的本质。 您可以在支持硬件浮点运算的所有语言中看到同样的东西。
 * 可以使用“round（）”功能控制显示精度，但也有上述情况，这意味着round(9.995,2)返回9.99而不是10，因为9.995的存储稍小于9.995。
-* decimal Library将给出精确的存储值，请参见以下示例。
+* decimal library将给出精确的存储值，请参见以下示例。
 
 
 ```python
