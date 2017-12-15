@@ -1227,5 +1227,5 @@ plt.title('3D plot of $z = x^2 + y^2$')
 
 ![](http://upload-images.jianshu.io/upload_images/5522220-cd6a23ee687856ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-[传送门-> 第三天的内容](https://github.com/MurphyWan/Python-first-Practice/blob/master/D3_of_3Day_DoneWithPython.md)
+[传送门-> 第三天的内容](https://github.com/ZynnLyr/Python-first-Practice/blob/patch-1/D3_of_3Day_DoneWithPython.md)
 
