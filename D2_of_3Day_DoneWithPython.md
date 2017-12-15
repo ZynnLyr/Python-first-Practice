@@ -20,6 +20,8 @@
 * 2016年6月5日
 * [课件来自] https://zhuanlan.zhihu.com/p/21332075
 ## 翻译：Murphy Wan
+## 定制：Ziyan Li
+## 献给：Yuanye Li
 
 ```python
 ```
@@ -38,7 +40,7 @@
 
 ------------------------------以下为英文原文-------------------------------------
 
-* Day 1: Introduction to Python and scientific programming. Basics in Python: data type, contro structures, fu nctions,  l/O file.
+* Day 1: Introduction to Python and scientific programming. Basics in Python: data type, control structures, functions,  I/O file.
 * Day 2: Computation with Numpy, Scipy, Matplotlib and other modules. Solving some maths problems with  Python.
 * Day 3: Time series: statistics and real data analysis with Pandas. Stochastics and Monte Carlo.
 
@@ -92,7 +94,7 @@ import numpy
 * or for short by
 
 ```python
-2import numpy as np
+import numpy as np
 ```
 
 * Sometimes you do not have to import the whole module, like
@@ -124,25 +126,6 @@ cost  =  t_end -t_start
 print ( 'Time cost of funl is  %f' %cost)
 ```
 
-------------------------------以下为英文原文-------------------------------------
-
-* Try to import the module timeit and use it to obtain how long you computer takes to run a specific code.
-
-```python
-import timeit
-def  funl (x, y):      
-return x**2 + y**3
-t_start  =  timeit.default_timer()
-z =  funl(109.2, 367.1)
-t_end  =   timeit.default_timer()
-cost  =  t_end -t_start
-print ( 'Time cost of funl is  %f' %cost)
-```
-
-
-
-
-
 
 
 ```python
@@ -157,7 +140,6 @@ print ( 'Time cost of funl is  %f' %cost)
   - 优化
   - 数值整合
 
-* Sympy：符号计算（解析的 Analytical）
 * Pandas：统计与数据分析（明天）
 
 ------------------------------以下为英文原文-------------------------------------
@@ -169,7 +151,6 @@ print ( 'Time cost of funl is  %f' %cost)
   - solution of linear and nonlinear equations           
   - optimisation           
   - numerical integration
-* Sympy: Symbolic computation (Analytical).
 * Pandas: Statistical and data analysis(tomorrow)
 
 
@@ -234,23 +215,6 @@ Out [3] :  array([ 2.+O.j,  3.+O.j,  6.+O.j,  7.+1.j])
 ```
 
 
-------------------------------以下为英文原文-------------------------------------
-
-Create the ndarray
-* We import Numpy (at the beginning of the script or in the terminal): 
-```python
-import numpy as np
-```
-* Then we create numpy arrays:   
-
-```python
-In [1] : np.array([2, 3, 6, 7])   
-Out[l] : array([2, 3, 6, 7])   
-In [2] : np.array([2, 3, 6, 7.])   
-Out [2] :  array([ 2.,  3.,  6., 7.])  <- Hamogenaous   
-In  [3] :  np.array( [2,  3,  6,  7+ij])   
-Out [3] :  array([ 2.+O.j,  3.+O.j,  6.+O.j,  7.+1.j])
-```
 
 
 ```python
@@ -308,7 +272,7 @@ Out [3] : (2,3)
 In  [4] : a.ndim   #<- 维度数  (Number of dimensions)
 Out [4] : 2
 
-In  [5] : a,size   #<- 元素数量 (Total number of elements)
+In  [5] : a.size   #<- 元素数量 (Total number of elements)
 Out [5] : 6
 ```
 
@@ -384,11 +348,11 @@ print(c)
 
 ```python
 In [1] : np.zeros(3)              # zero(),全0填充数组
-Out[l] : array([ O., 0., 0.])
+Out[1] : array([ 0., 0., 0.])
 
 In [2] : np.zeros((2, 2), complex)
 Out[2] : array([[ 0.+0.j, 0.+0.j],                
-                [ 0.+O.j, 0.+0.j]])
+                [ 0.+0.j, 0.+0.j]])
 
 In [3] : np.ones((2, 3))          # ones(),全1填充数组
 Out[3] : array([[ 1., 1., 1.],
@@ -413,7 +377,7 @@ Out[3] : array([[ 1., 1., 1.],
                    [ 0.31149806, 0.02596055, 0.42367316, 0.67975249l])
 ```
 
-* randn: 均值为0，标准差为1的标准（高斯）正态分布  {standard normal (Gaussian) distribution with mean 0 and variance 1} 
+* randn: 均值为0，标准差为1的标准（高斯）正态分布  (standard normal (Gaussian) distribution with mean 0 and variance 1)
 
 ```python
   In [2]: np.random.randn(2, 4)  
@@ -618,7 +582,7 @@ Out[31] : array([2, 3, 4])
 In [32] : b[0] = 100
 In [33] : b
 
-Out[33] : array([l00, 3, 4])
+Out[33] : array([100, 3, 4])
 In [34] : a
 Out[34] : array([0,1,100,3,4])
 ```
@@ -725,9 +689,9 @@ Out[4]: array([ 70, 100])
 *  savetxt()将表保存到文本文件。 (savetxt() saves a table to a text file.)     
 
 ```python     
-In  [1]: a = np,linspace(0. 1, 12); a,shape ' (3, 4); a
+In  [1]: a = np.linspace(0. 1, 12); a,shape = (3, 4); a
 Out [1] :
-array([[ O.  ,  0.09090909, 0.18181818,  0.27272727],
+array([[ 0.  ,  0.09090909, 0.18181818,  0.27272727],
 [  0.36363636,  0.45454545, 0.54545455,  0.63636364],
 [  0.72727273,  0.81818182. 0.90909091,  1.]])
 
@@ -737,14 +701,14 @@ In [2] : np.savetxt("myfile.txt", a)
 
 * 其他可用的格式(参见API文档)  {Other formats of file are available (see documentation)}
 
-* save()将表保存为Numpy“.npy”格式的二进制文件 (save() saves a table to a binary file in NumPy ".npy" format.)  
+* save()将表保存为Numpy ".npy" 格式的二进制文件 (save() saves a table to a binary file in NumPy ".npy" format.)  
 
 ```python    
   - In [3] : np.save("myfile" ,a)    
 ```
 
 
-  - 生成一个二进制文件myfile .npy，其中包含一个可以使用np.load（）加载的文件。 {produces a binary file myfile .npy that contains a and that can be loaded with np.load().}
+  - 生成一个二进制文件myfile.npy，其中包含一个可以使用np.load（）加载的文件。 (produces a binary file myfile .npy that contains a and that can be loaded with np.load().)
 
 
 
@@ -763,7 +727,7 @@ In [2] : np.savetxt("myfile.txt", a)
 
 * loadtxt（）将以文本文件存储的表读入数组。 (loadtxt() reads a table stored as a text file into an array.)
 
-* 默认情况下，loadtxt()假定列是用空格分隔的。 您可以通过修改可选的参数进行更改。 以散列（＃）开头的行将被忽略。 (By default, loadtxt() assumes that columns are separated with whitespace. You can change this by modifying optional parameters. Lines starting with hashes (#) are ignored.)
+* 默认情况下，loadtxt()假定列是用空格分隔的。 您可以通过修改可选的参数进行更改。 以散列符号（＃）开头的行将被忽略。 (By default, loadtxt() assumes that columns are separated with whitespace. You can change this by modifying optional parameters. Lines starting with hashes (#) are ignored.)
 
 * 示例文本文件data.txt： (Example text file data.txt:)
 
@@ -831,9 +795,9 @@ In [2] : np.savetxt("myfile.txt", a)
 * ...
 
 要加载一个特定的模块，请这样使用, 例如 :
-
-* from scipy import linalg
-
+```
+from scipy import linalg
+```
 
 
 ```python
@@ -852,8 +816,10 @@ from scipy import linalg  
 
 A = np.random.randn(5, 5)
 b = np.random.randn(5)
-x = linalg.solve(A, b)     # A x = b#print(x)    
-eigen = linalg.eig(A)     # eigens#print(eigen)    
+x = linalg.solve(A, b)     # A x = b
+print(x)    
+eigen = linalg.eig(A)     # eigens
+print(eigen)    
 det = linalg.det(A)     # determinant    
 print(det)            
 
@@ -1061,7 +1027,7 @@ plt.title(’Multi-plot e.g. ’, fontsize = 18)
 
 ![multiple-plotting](https://github.com/MurphyWan/Python-first-Practice/blob/master/images/3days_img013_multiple_plotting.jpg)
 
-* Forinformations:See     
+* For informations:See     
 
 ```python
 
@@ -1075,11 +1041,11 @@ help(plt.plot)
 
 
 
-## 绘制子图 (Subplots，即在           )
+## 绘制子图 (Subplots)
 
 ```python
 
-import numpy as np’
+import numpy as np
 import matplotlib.pyplot as plt
 
 def pffcall(S, K):    
@@ -1120,7 +1086,7 @@ sub2.set_ylim([-10, 40])
 
 
 
-##  在绘制的图上添加文本和注释 (Adding texts to plots)
+##  (Optional reading material) 在绘制的图上添加文本和注释 (Adding texts to plots)
 
 ```python
 
@@ -1250,138 +1216,7 @@ plt.title('3D plot of $z = x^2 + y^2$')
 
 
 
-## Sympy
 
-
-
-
-```python
-```
-
-
-
-
-
-
-
-
-
-```python
-```
-
-
-
-## 符号计算 (Symbolic computation)
-
-* 到目前为止，我们只考虑了数值计算。 (So far, we only considered the numerical computation.)
-
-* Python也可以通过模块表征进行符号计算。(Python can also work with symbolic computation via  module sympy.)
-
-* 符号计算可用于计算方程，积分等的显式解。 (Symbolic computation can be useful for calculating explicit solutions to equations, integrations and so on.)
-
-
-
-
-
-```python
-```
-
-
-## 声明一个符号变量 (Declare a symbol variable)
-
-```python
-
-import sympy as sy
-
-#声明x，y为变量
-x = sy.Symbol('x')
-y = sy.Symbol('y')
-a, b = sy.symbols('a b')
-
-#创建一个新符号（不是函数
-f = x**2 + 2 - 2*x + x**2 -1
-print(f)
-#自动简化
-g = x**2 + 2 - 2*x + x**2 -1
-print(g)
-```
-
-
-
-
-
-```python
-```
-
-
-## 符号的使用1：求解方程  (Use of symbol 1: Solve equations)
-
-```python
-
-import sympy as sy
-
-x  = sy.Symbol ('x')
-y  = sy.Symbol('y')
-
-# 给定[-1,1]  (give [-1, 1])
-print(sy.solve (x**2 - 1))
-
-# 不能证解决 (no guarantee for solution)
-print(sy.solve(x**3  +  0.5*x**2 - 1))
-
-# 用x的表达式表示y     (exepress x in terms of y)
-print (sy.solve(x**3  +  y**2))
-
-# 错误：找不到算法 (error:  no  algorithm  can  be  found)
-print(sy.solve(x**x + 2*x - 1))
-```
-
-
-
-
-```python
-```
-
-
-
-## 符号的使用2：集成  (Use of symbol 2: Integration)   
-
-```python
-import sympy as sy
-
-x = sy.Symbol('x')
-y = sy.Symbol( 'y')
-b = sy.symbols ( 'a b')
-
-# 单变量 single  variable
-f = sy.sin(x) + sy.exp(x)
-print(sy.integrate(f, (x,  a,  b)))
-print(sy.integrate(f, (x,  1,  2)))
-print(sy.integrate(f, (x,  1.0,2.0)))
-# 多变量 multi variables
-g = sy.exp(x) + x * sy.sin(y)
-print(sy.integrate(g, (y,a,b)))
-```
-
-
-
-```python
-```
-
-
-## 符号的使用3：分化  (Use of symbol 3: Differentiation)
-
-```python
-import sympy as sy
-x =  sy.Symbol( 'x')
-y =  sy.Symbol( 'y')
-# 单变量 (single variable)
-f = sy.cos(x) + x**x
-print(sy . diff (f ,  x))
-#  多变量  (multi variables)
-g = sy.cos(y) * x + sy.log(y)
-print(sy.diff (g,  y))
-```
 
 
 ```python
