@@ -3,7 +3,7 @@
 
 # 《三天搞定Python基础概念之第二天》 Day 2 
 
-### Day2，即第二篇主要是讲一些偏计算的Library的使用，也就是numpy，scipy，sympy和matplotlib。
+### Day2，即第二篇主要是讲一些偏计算的Library的使用，也就是numpy，scipy和matplotlib。
 
 ```
 前言：
@@ -53,7 +53,7 @@
 ### Numpy
 ### Scipy
 ### Matplotlib
-### Sympy
+
 
 
 
