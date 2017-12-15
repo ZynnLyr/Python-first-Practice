@@ -126,18 +126,6 @@ Python 2 or 3?
 ```python
 ```
 
-## 今天的安排
-* 早上：Python编程基础介绍。 在上午的会议中，您将需要做一些练习。 只是一些热身水平的问题，他们会给你一个关于Python编程的想法。
-* 下午：半小时内完成介绍部分。 那么我们会有三个大问题要解决。 他们将是今天的一个很好的总结：讲座。 你将有一个小时独立工作。 然后，我将在过去半小时内提供分析和解决方案。
-
-
-
-Today's arrangements
-* Morning: An introduction to Python programming basics. There will be a few exercises you need to do during the morning session.  But just some warm-up level  questions, and they will give you an idea about Python programming.
-* Afternoon: We will finish the introduction part in half an hour. Then we will have three big problems to solve. They will be a good summary of today:s lecture. You will have one hour to work them out independently. I will then provide the analytics and the solutions in the last half an hour.
-
-```python
-```
 
 ## 练习1
 * 打开PyCharm
@@ -146,18 +134,8 @@ Today's arrangements
   print('Hello World!')
 
 * 运行该文件：在左侧栏找到文件，右键文件弹出菜单后点击Run xxx.py
-* 查看下方的控制台界面
+* 查看下方的控制台界面,是否输出 Hello World！
 
------------------
-
-Exercises 1
-
-* Install Anaconda and update it in order to have the  newest version of all packages. We shall use Python 3.4 (and not the previous Python 2.7 version).
-* Start Spyder and compute 76 by typing:    
-
-x = 7 ** 6  print (x)
-
-* Start IPython Notebook and compute 76
 
 ```python
 ```
@@ -251,9 +229,6 @@ x = 7 ** 6  print (x)
 * 可以使用“round（）”功能控制显示精度，但也有上述情况，这意味着round(9.995,2)返回9.99而不是10，因为9.995的存储稍小于9.995。
 * decimal Library将给出精确的存储值，请参见以下示例。
 
-----------------
-
-* Try to type 0.1+0.2 in your console. You will find that the value is  - 0.30000000000000004            * This is in the very nature of binary floating-point. You can see the same kind of thing in all languages that support your hardware's floating-point arithmetic.* The display precision can be controled using "round()" function, but it also has above situation, which means round(9.995, 2) returns 9.99 rather than 10, since 9.995 is stored slightly smaller than 9.995.* Library decimal would give precise stored value, See the following example.
 
 ```python
 ```
@@ -550,13 +525,6 @@ a1,b1,c1 = f(...)
 ```python
 
 ```
-# We can see an example here.
-# A function returns max and min.
-
-
-```python
-
-```
 
 ## 读取/写入文件  (Reading/ writing files)
 
@@ -745,7 +713,7 @@ open('C:\Users\user\Documents\file.txt')
 
 ```
 
-* 你的方法将返回
+* 你的函数将返回
 
 ```python
                [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
@@ -754,17 +722,6 @@ open('C:\Users\user\Documents\file.txt')
 
 
 
------
-
-Your boss ask you to code a piece of code, such that for anylength list with floating or int type elements, your functioncan sort them from bigger to smaller.
-e.g. If your boss give a list
-```python                
-           [8, 2, 4, 6, 1, 9, 0, 3, 5, 7]
-```
-your function should return
-```python[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]```
-
-
 ```python
 
 
@@ -772,74 +729,6 @@ your function should return
 
 
 
-## 目标2  (Target 2)
-
-* 代码功能
-  - ![notebook-0](https://github.com/MurphyWan/Python-first-Practice/blob/master/images/3days_img01.gif)
-
-* 使用派生词的定义，对其数字导数函数进行编码。
-
-* 找到数值解
-
-  - ![notebook-1](https://github.com/MurphyWan/Python-first-Practice/blob/master/images/3days_img02.gif)   
-
-通过二等分法。
-
-* 通过Newton-Raphson方法再次解决，该方法是“根搜索”的另一种数值方法。 它是由...给出的
-  - ![notebook-2](https://github.com/MurphyWan/Python-first-Practice/blob/master/images/3days_img03.png)
-
------
-
-* Code the function
-  - ![notebook-0](https://github.com/MurphyWan/Python-first-Practice/blob/master/images/3days_img01.gif)
-* Using the definition of derivatives, code its numerica derivatives function.
-* Find the numerical solution to
-  - ![notebook-1](https://github.com/MurphyWan/Python-first-Practice/blob/master/images/3days_img02.gif)   
-    by bisectian method.
-* Solve above again by Newton-Raphson, which is another numerical method for root-searching. It is given by
-  - ![notebook-2](https://github.com/MurphyWan/Python-first-Practice/blob/master/images/3days_img03.png)
-
-* https://www.codecogs.com/latex/eqneditor.php
-
-
-```python
-
-
-```
-
-
-## 目标2的提示  (Hint for Target 2:)
-
-* 衍生物可以近似于 
-  
-  - ![notebook-3](https://github.com/MurphyWan/Python-first-Practice/blob/master/images/3days_img04.gif)
-  
-  - ![notebook-4](https://github.com/MurphyWan/Python-first-Practice/blob/master/images/3days_img05.gif)
-  
-  - ![notebook-5](https://github.com/MurphyWan/Python-first-Practice/blob/master/images/3days_img06.gif)
-
-* 二分法实现如下：
-  - 给出间隔[a，b]，使得f（a）和f（b）具有不同的符号。
-  - 计算中点c = 0.5 （a + b）和中点f（c）的函数值。
-  - 如果f（x）足够，则停止。 否则，将（a，f（a））或（b，f（b））替换为（c，f（c）），以便在新间隔内存在过零点
-
-----
-
-* The derivative can be appraximated by
-  - f'(x) ≈ [f(x + h) - f (x)]/h,              
-  - f'(x) ≈ [f(x + h) - f(x - h)]/h,
-  - f'(x) ≈ [f(x+h) - f (x-h)]/2h                 
-
-* Bisection is implemented as:
-  - Give an interval [a, b] such that f(a) and f(b) have different sign.
-  - Calculate the midpoint c= 0.5 * (a + b) and the functian value at the midpoint, f(c).
-  - If f(x) is goad enough, stop. Otherwise replace either (a, f(a)) or (b, f(b) with (c, f(c)) so that there is a zero crossing within the new interval
-
-
-```python
-
-
-```
 
 
 ## 目标3  (Target 3)
@@ -893,4 +782,4 @@ your function should return
 ```
 
 
-[传送门-> 第二天的内容](https://github.com/MurphyWan/Python-first-Practice/blob/master/D2_of_3Day_DoneWithPython.md)
+[传送门-> 第二天的内容](https://github.com/ZynnLyr/Python-first-Practice/blob/patch-1/D2_of_3Day_DoneWithPython.md)
