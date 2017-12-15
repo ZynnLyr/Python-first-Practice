@@ -20,17 +20,19 @@
 * 2016年6月5日
 * [课件来自] https://zhuanlan.zhihu.com/p/21332075
 ## 翻译：Murphy Wan
+## 定制：Ziyan Li
+## 献给：Yuanye Li
 ```python
 ```
 
 ## 大纲（ Outline）
-* 第1天：Python和科学编程介绍。 Python中的基础知识：  - 数据类型  - 控制结构  - 功能  - I/O文件
+* 第1天：Python和科学编程介绍。 Python中的基础知识：  - 数据类型  - 控制结构  - 函数  - I/O文件
 * 第2天：用Numpy，Scipy，Matplotlib和其他模块进行计算。 用Python解决一些数学问题。
 * 第3天：时间序列：用Pandas进行统计和实际数据分析。 随机和蒙特卡罗。
 
 ------------------------------以下为英文原文-------------------------------------
 
-* Day 1: Introduction to Python and scientific programming. Basics in Python: data type, contro structures, fu nctions,  l/O file.
+* Day 1: Introduction to Python and scientific programming. Basics in Python: data type, control structures, functions,  I/O file.
 * Day 2: Computation with Numpy, Scipy, Matplotlib and other modules. Solving some maths problems with  Python.
 * Day 3: Time series: statistics and real data analysis with Pandas. Stochastics and Monte Carlo.
 ```python
@@ -76,7 +78,7 @@ Why Python?
 ```python
 ```
 
-## 使用Python 2或3？
+## (optional reading material)使用Python 2或3？
 * Python 3不能向后兼容Python 2，这意味着Python 2中的某些软件包或库无法在Python 3中使用。
 * 然而，许多机构仍在使用Python 2，因为仍然有几个软件包与Python 3不兼容。
 * Python 2.x是历史遗留物，而现在，Python 3.x是该语言的未来。 2010年年中，2.7版本的2.7版本将不会再出现新的主要版本。
@@ -108,41 +110,8 @@ Python 2 or 3?
 * https://www.kevinsheppard.com/images/0/09/Python_introduction.pdf A strong econometrics focus. Parts of this note are based on this document.
 * For some particular packages, such as Numpy and Pandas, the best way to learn is to use their official documentation and implement some examples by yourself.
 * Use Google and Stack Overflow.
-```python
-```
 
-## Python环境 （Python environment）
 
-* 安装Python科学堆栈的推荐方法是使用Continuum Analytics Anaconda。
-* Anaconda是一个免费的软件包管理器，环境管理器，以及开源软件包的集合。
-* Anaconda包括核心Python解释器和标准库。
-* https://www.continuum.io/downloads
-
-------------------------------以下为英文原文-------------------------------------
-
-* The recommended method to install the Python scientific stack is to use Continuum Analytics Anaconda.
-* Anaconda is a free package manager, environment manager, and collection of open source packages.
-* Anaconda includes both the core Python interpreter and standard libraries.
-* https://www.continuum.io/downloads
-
-```python
-```
-
-## Anaconda中包括的库（Libararies）
-* NumPy（http://numpy.scipy.org ）：该库用于处理（大）数组。
-* SciPy（http://www.scipy.org ）：该库包含许多有用的科学功能。
-* Matplotlib（http://matplotlib.sourceforge.net ）：该库用于绘图。
-* Pandas（http://pandas.sourceforge.net ）：该库有效并快速分析大数据集; 尤其针对金融时间序列。
-* IPython（http://wprw.ipython.org ）：shell、或基于浏览器：开发环境。
-* Spyder（http://pythonhosted.org/spyder/ ）：IDE交互式开发环境
-```python
-```
-
-## 管理你的Anaconda
-* 在你的终端或cmd，输入
- conda list
-* 您可以看到已安装的软件包列表
-* 更多的管理方法可以在这里找到：  http://conda.pydata.org/docs/using/pkgs.html
 
 ```python
 ```
@@ -171,12 +140,13 @@ Today's arrangements
 ```
 
 ## 练习1
-* 安装Anaconda并更新它以便拥有   所有包的最新版本。 我们将使用Python 3.4（而不是以前的Python 2.7版本）。
-* 通过键入以下命令启动Spyder并计算76：     
+* 打开PyCharm
+* 新建一个文件并键入以下代码并保存    
   
-  x = 7 ** 6   打印（x）
+  print('Hello World!')
 
-* 启动IPython Notebook并计算7的6次方
+* 运行该文件：在左侧栏找到文件，右键文件弹出菜单后点击Run xxx.py
+* 查看下方的控制台界面
 
 -----------------
 
@@ -194,18 +164,12 @@ x = 7 ** 6  print (x)
 
 
 ## 缩进（Indentation）
+* 在C++等语言中使用‘；’结束一个语句；而Python使用回车和缩进来识别语句
 * 在某些语句之后，会加一个缩进; 缩进减少，则表示当前块结束。
 * 例如
-    x = 7 ** 6
-    print（x）#witt. fron't  inden-tation
-* 段代码在Python中是错误的，虽然它在C ++，Matlab和许多其他代码或应用程序中是可以接受的。
+    if a is true:
+      print（x） 
 
---------------
-
-* An increase in indentation comes after certain statements; a decrease in indentation signifies the end of the current block.
-* For e.g
-x = 7 ** 6          print (x)  # witt. fron't  inden-tation
-* This piece of code will be error in Python, though it is acceptable in C++, Matlab and many other code or applications.
 
 ```python
 ```
@@ -219,7 +183,7 @@ x = 7 ** 6          print (x)  # witt. fron't  inden-tation
 ----------------
 
 * Be consistent with indentation and line break. Don't mess your scripts up.
-* Do Never write variables without its real meaning. Write descriptive variables.
+* Do never write variables without its real meaning. Write descriptive variables.
 * Write comments. Help others and the the future yourself to understand what you write right now.
 * Do not start to learn more than one programming language at the same time.
 
@@ -279,7 +243,7 @@ x = 7 ** 6          print (x)  # witt. fron't  inden-tation
 ```python
 ```
 
-## 浮点数的精度（Precision of float）
+## (optional reading material)浮点数的精度（Precision of float）
 * 尝试在您的控制台中键入0.1 + 0.2。 你会发现这个值是  
 - 0.30000000000000004
 
@@ -372,7 +336,9 @@ print(w.strip('http://')) #delete sth
 ```python
 ```
 
-## 列表的一些有用功能（Some useful functions for list）
+## 列表的一些有用函数（Some useful functions for list）
+* 这些函数包括但不限于append，extend，insert，remove
+* 注意：这些函数是从属于list的，必须由list实体来调用，而不是凭空调用
 ```python
 
 l = [1, 2, 3.14, 'data'] #list
@@ -392,7 +358,8 @@ print(l)l.remove ('data')   #delete an elementprint(l)
 ```python
 ```
 
-## Python功能：参考对象（Python features: Refer for object）
+## Python功能：对象引用（Python features: Refer for object）
+* 这个概念类似于C++中的指针
 * 在Python中，如果要将值从一个对象传递给另一个对象，则=(等号)将按地址传递值。
 * 例如，
 ```python
@@ -407,14 +374,7 @@ z[0] = 5
 print (x)
 输出将会是[5,2,3,4],[1,2,3,4]
 ```
---------------------------------------------------
 
-* In Python if you want pass the value from one object to another, = will pass the value by address.
-* For example,
-  - x = [1, 2. 3, 4]  
-  - y = x  - y[0] = 5  - print(x)
-  - x = [1, 2, 3, 4]  - z  =  x.copy()  - z[0] = 5  - print (x)
-  - The output will be [5,2,3,4],[1,2,3,4]
 
 ```python
 ```
@@ -423,23 +383,14 @@ print (x)
 
 * 我们可以创建一个包含多行的列表
 ```python
-a  =  [[1,2 , 3 ,4],[1,2 ,3,4],[1,2 ,3]] 
+a  =  [[1,2,3,4],[1,2,3,4],[1,2,3]] 
 print(a)
 print(a[0][3])
 ```
 * 但请注意：
   多维列表不是矩阵。 数学运算符可能会导致您不想看到的结果。 对于矩阵计算，我们将在明天花费大量的时间。
 
--------------------------
 
-We can create a list with multi-rows like
-
-a  =  [[1,2 , 3 ,4],[1,2 ,3,4],[1,2 ,3]]
-print(a)
-print(a[0][3])
-
-But note:
-Multidimensional list is not a matrix. Mathematical operators may lead to the results that you don't want to see. For matrix computations, we will spend a lot of time on it tomorrow.
 
 ```python
 ```
@@ -492,15 +443,7 @@ if  a[0]< a[1]  and a[0]< a[2] :
      将会执行A语句，直到满足while的条件。
 ```
 
--------
 
-```python
-There are many different style code for loops, We just present two common used statements.
-  -     for _ in ... : statement A
-    is the most common used statement for loops, ait is combined with range(starC end, step). For e.g.,
-  - range(0, 8, 1) gives [0, 1, 2, 3, 4, 5, 6, 7]
-while ... : statement A* will implement A until it satisfy the condition of while.
-```
 ```python
 ```
 
@@ -524,7 +467,7 @@ while  a < 100 :
 ```
 ```python
 ```
-## break和continue. 
+## 循环语句：break和continue. 
 
 * 你可以在循环语句中使用关键字break，以跳出循环。(you can use the keyword break inside a loop to leave the loop..) 
 * 你也可以在循环语句中使用关键字continue，以暂停当前循环执行后面的语句。(you can use the keyword continue inside a loop to stop pracessing the current iteration of the loop and immediately go on to the next round.)
@@ -537,75 +480,64 @@ for i in range(300, 351):
         print (i)
         break
     else :
-        cantinue
+        continue
 ```
 ```python
 ```
-## 循环语句嵌套（Loop inside the loop）
-* 循环语句可以内嵌在另一个循环语句中(Loop can be written inside another loop)
 
-```python
-for  i  in range (10):
-     print (i)     
-     for j in range (5):
-         print (j)
-```
-```python
-```
 ## 练习(Exercises)
-* Calculate the sum from 1 to 1000.
 * Calculate the sum of the even numbers from 1 to 1000
 
 ```python
 
 ```
-## 功能 (Functions)
+## 函数 (Functions)
 
 
 ```python
 
 ```
 
-## 功能(方法or函数)的声明 (Function declaration)
+## 函数(或翻译为‘方法’)的声明 (Function declaration)
 * 方法定义如下(Functions are defined as)
 ```python
-def   TheNameOfFunction(paral, para2):
-      ...      
-      return Outcome
+def the_name_of_function(parameter1, parameter2):
+    #put your function body here      
+    return result
 ```
-* Then the function will return the value of its outcome to wherever the function is called.
+* Then the function will return the value of its result to wherever the function is called.
 
 ```python
 ```
-## Example: function of maximum of two variables
+## Example: 函数用以返回两个数的最大值
 ```python
-def  MaxOfTwo (x1, x2):
+def  max_of_two_numbers (x1, x2):
      if  x1 >= x2:
           return x1       
      else:
           return x2
 
-a = l
+a = 1
 b = 2
-c = MaxOfTwo(a, b)
+c = max_of_two_numbers(a, b)
 print(c)
 ```
 
 ```python
 ```
 
-## Default arguments
+## 函数参数的默认值
 * Functions in Python have no function overloading. It means that you cannot have two functions share the same name. But operator overloading is fine.
 * You can provide default values for a function's arguments,  for e.g.                
 ```python
-   def MaxOfTwo(xl, x2 = 1): ...
+   def max_of_two_numbers(xl, x2 = 1): ...
 ```
 * Please do put your default arguments at the end of your funaion arguments.
 
 ```python
 ```
-## Functions with two outputs
-* A funaion can also return two or more outputs. In that case you should write you code in the following:
+## 具有多个返回值的函数
+* A function can also return two or more outputs. In that case you should write you code in the following:
 ```python
 def  f (x1, x2,  x3, ...):
      ......
@@ -702,11 +634,7 @@ file.close()
 
 
 ```python
-输出将是
-        我是为这个课程而诞生的
-        你怎么样？你的考试如何
 
-* ------以下是英文原文--------------------
 Output would be:
           I am created for the course   
           How about you? How is your exam?
@@ -798,7 +726,7 @@ open('C:\Users\user\Documents\file.txt')
 ```
 
 
-## 实验部分  (Lab Session)
+## 实践环节  (Lab Session)
 
 
 ```python
@@ -842,27 +770,6 @@ your function should return
 
 ```
 
-
-## 目标1提示： (Hint for Target 1:)     
-
-* 有三种不同的排序算法：
-
-  - 气泡排序：从最后开始，将最后两次的最大值传递给前一个索引。 你第一次遍历每一个数字，你通过最大的数字到一开始。 然后你在剩下的数字中重复一遍。
-  - 选择排序：首先搜索整个列表。 并将最小的数字传递到列表的末尾。 然后搜索整个列表排除最后一个数字。 再重复该步骤。
-  - 插入排序：从一开始，按顺序比较第一个数字和第二个数字，将第一个数字交换为最大数字。 然后重复它构成第二个直到结束。
-
------ 
-
-There are three different algorithms of sorting:
-* Bubble sort: Starting from the end, pass the maximum of last two to the former index. The first time you traverse every number, you pass the largest number to the beginning. Then you repeat them in the rest numbers.
-* Selectian sort: Search the whole list first. And pass the smallest number to the end af the list. Then search the whole list exclude the last number. Repeat it.
-* Insert sort: Starting from the beginning, compare the first number and the rest sequentially to swap the first number to be the biggest. Then repeat it fram the second one until end
-
-
-```python
-
-
-```
 
 
 ## 目标2  (Target 2)
