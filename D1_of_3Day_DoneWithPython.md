@@ -220,7 +220,7 @@ b = 3.14 # fLoat 
 c = 3    #int 
 d = a ** 2 # square of a 
 print (type (d))    # return the type of d  
-print (type (d/l0)) # return the type of d/l0 
+print (type (d/10)) # return the type of d/10 
 print (type (a/b))  # return the type of a/b 
 print (type (a/c))  # return the type of a/c 
 print (type (b*d))  # return the type of b*d
@@ -231,7 +231,7 @@ print (type (b*d))  # return the type of b*d
 ```python
 ```
 
-## (optional reading material)浮点数的精度（Precision of float）
+## (Optional reading material) 浮点数的精度（Precision of float）
 * 尝试在您的控制台中键入0.1 + 0.2。 你会发现这个值是 0.30000000000000004
 * 这是二进制浮点的本质。 您可以在支持硬件浮点运算的所有语言中看到同样的东西。
 * 可以使用“round（）”功能控制显示精度，但也有上述情况，这意味着round(9.995,2)返回9.99而不是10，因为9.995的存储稍小于9.995。
@@ -735,8 +735,54 @@ open('C:\Users\user\Documents\file.txt')
 
 ```
 
+## 目标2  (Target 2)
+* Write a function that generates the next level of Pascal's triangle given a list that represents a valid row of Pascal’s triangle.
+```
+generate_pascal_row([1, 2, 1]) -> [1, 3, 3, 1]
+generate_pascal_row([1, 4, 6, 4, 1]) -> [1, 5, 10, 10, 5, 1]
+generate_pascal_row([]) -> [1]
+```
 
+As a reminder, each element in a row of Pascal's triangle is formed by summing the two elements in the previous row directly above (to the left and right) that elements. If there is only one element directly above, we only add that one. For example, the first 5 rows of Pascal's triangle look like:
 
+```
+    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1
+```
+
+You may find the `zip` function discussed briefly in lecture useful, along with some cleverness. Alternatively, you could solve this problem with `enumerate`. Avoid using a loop of the form `for i in len(range(row)):`.
+
+*Hint: Check out the diagram below. How could you use this insight to help complete this problem?*
+
+```
+  0 1 3 3 1
++ 1 3 3 1 0
+-----------
+  1 4 6 4 1
+``` 
+## 目标2提示：  (Hint for Target 2:)
+* Sample code:
+```
+def generate_pascal_1(l):
+    if l==[]:
+        return [1]
+    l1 = [0] + l
+    l2 = l + [0]
+    return list(sum(pair) for pair in zip(l1,l2))
+
+def generate_pascal_2(old_list):
+    new_list = []
+    for index,value in enumerate(old_list):
+        if index == 0:
+            new_list.append(value)
+        else:
+            new_list.append(value + old_list[index - 1])
+    new_list.append(1)
+    return new_list
+```
 
 
 ## 目标3  (Target 3)
@@ -766,6 +812,13 @@ open('C:\Users\user\Documents\file.txt')
 
 
 * 其中一个方法是递归地使用一个函数。
+* Sample code:
+```
+def fibonacci(i):
+    if i == 1 or i == 2:
+        return 1
+    return fibonacci(i-1) + fibonacci(i-2)
+```
 
 * 其中一个方法是利用append（）函数。
 
@@ -785,7 +838,7 @@ open('C:\Users\user\Documents\file.txt')
 
 ```python
 
-第一天的课程到此结束，辛苦了
+第一天的课程到此结束，辛苦了,么么哒
 
 ```
 
