@@ -78,7 +78,7 @@ Why Python?
 ```python
 ```
 
-## (optional reading material)使用Python 2或3？
+## (Optional reading material) 使用Python 2或3？
 * Python 3不能向后兼容Python 2，这意味着Python 2中的某些软件包或库无法在Python 3中使用。
 * 然而，许多机构仍在使用Python 2，因为仍然有几个软件包与Python 3不兼容。
 * Python 2.x是历史遗留物，而现在，Python 3.x是该语言的未来。 2010年年中，2.7版本的2.7版本将不会再出现新的主要版本。
